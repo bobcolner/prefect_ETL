@@ -1,0 +1,38 @@
+# mamba env create --force -f conda_flow.yaml
+# mamba env update -n flow -f conda_flow.yaml
+# mamba env remove -n flow
+name: flow
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python = 3.9
+  - mamba
+  - ipython
+  - matplotlib
+  - jupyterlab
+  - nodejs
+  - jupyterlab-git
+  - jupyterlab_execute_time
+  - nbdime
+  - pandas
+  - pandera
+  - statsmodels
+  - scikit-learn
+  - scikit-posthocs
+  # - flatten_json
+  # - nested-lookup
+  - requests
+  - pandas-gbq
+  - google-api-python-client
+  - google-cloud-bigquery
+  - google-cloud-storage
+  - google-cloud-logging
+  - pip
+  - pip:
+    - "prefect[google,viz] < 2.0"
+    - pandas-bokeh
+    - graphviz
+    - pudb
+
+# jupyter labextension install jupyterlab-tailwind-theme
